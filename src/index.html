@@ -66,7 +66,7 @@
                                             </tr>
                                             <tr>
                                                 <td><i class="fa-solid fa-user"></i> age</td>
-                                                <td><script type="text/javascript">document.write(Math.floor((Date.now() - new Date("1997-04-17")) / (1000 * 3600 * 24)/365));</script> years</td>
+                                                <td id="age">26 years</td>
                                             </tr>
                                             <tr>
                                                 <td><i class="fa-solid fa-city"></i> residence</td>
@@ -98,6 +98,10 @@
 
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script type="text/javascript">
+            // age
+            $("#age").text(Math.floor((Date.now() - new Date("1997-04-17")) / (1000 * 3600 * 24)/365) + " years");
+
+            // dark/light mode
             let isDarkModeActive = false;
 
             function refreshMode(isDark) {
