@@ -1,0 +1,128 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>dennis.paul.hamburg</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Fira+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/pico.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="https://kit.fontawesome.com/65a7380360.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    </head>
+
+    <body>
+        <span role="button" id="light-dark-mode" class="outline" data-tooltip="light/dark mode" data-placement="left">
+            <i alt="Light/Dark Mode" class="fa-solid fa-moon"></i>
+        </span>
+
+        <main class="container-fluid">
+            <div class="container">
+                <div class="grid">
+                    <div>
+                        <h1>hello world!</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="grid">
+                    <article style="margin-bottom:0">
+                        <header>
+                            <span id="links">
+                                <a href="mailto:dennis+web@paul.hamburg" role="button" class=""><i class="fa-solid fa-paper-plane"></i></a>
+                                <a href="https://matrix.to/#/@dennis:paul.hamburg" rel="nofollow" role="button" class=""><i class="fa-solid fa-comments"></i></a>
+                                <a href="https://discordapp.com/users/211224991197429767" rel="nofollow" role="button" class=""><i class="fa-brands fa-discord"></i></a>
+
+                                <a href="https://www.linkedin.com/in/d-paul/" rel="nofollow" role="button" class=""><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="https://github.com/dnnspaul" rel="nofollow" role="button" class=""><i class="fa-brands fa-github"></i></a>
+                            </span>
+
+                            <div class="profile-image">
+                                <img src="img/dennis_paul.png" alt="Dennis Paul">
+                            </div>
+
+                            <h2>dennis paul</h2>
+                        </header>
+
+                        <div class="container">
+                            <div class="grid">
+                                <div style="position:relative;top:-67.5px;">
+                                    <h3 style="margin-bottom: 22.5px">projects</h3>
+                                    <p>
+                                        <a href="https://github.com/blaumedia/go-gtm-ga-proxy" rel="nofollow"><i class="fa-brands fa-golang"></i> Go-GTM-GA-Proxy</a>
+                                    </p>
+                                </div>
+                                <div>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td><i class="fa-solid fa-building"></i> working at</td>
+                                                <td><a href="https://www.iu-careers.com/?utm_campaign=dennis.paul" rel="nofollow">iu internationale hochschule</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="fa-solid fa-user"></i> age</td>
+                                                <td><script type="text/javascript">document.write(Math.floor((Date.now() - new Date("1997-04-17")) / (1000 * 3600 * 24)/365));</script> years</td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="fa-solid fa-city"></i> residence</td>
+                                                <td>hamburg, germany</td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="fa-solid fa-envelope"></i> e-mail</td>
+                                                <td>dennis+web@paul.hamburg</td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="fa-solid fa-earth-europe"></i> languages</td>
+                                                <td>german, english</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="grid" style="margin-top:10px;text-align:center;font-size:0.5rem">
+                    copyright 2023
+                </div>
+            </div>
+        </main>
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script type="text/javascript">
+            let isDarkModeActive = false;
+
+            function refreshMode(isDark) {
+                isDarkModeActive = isDark;
+
+                if (isDark) {
+                    $("html").attr("data-theme", "dark");
+                    $("#light-dark-mode").html('<i class="fa-solid fa-sun"></i>');
+                } else {
+                    $("#light-dark-mode").html('<i class="fa-solid fa-moon"></i>');
+                    $("html").attr("data-theme", "light");
+                }
+            }
+
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                refreshMode(true);
+            }
+
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+                refreshMode(event.matches);
+            });
+
+            $("#light-dark-mode").on("click", function() {
+                refreshMode(!isDarkModeActive);
+            });
+        </script>
+    </body>
+</html>

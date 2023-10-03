@@ -1,0 +1,101 @@
+/*************************************************
+**************************************************
+
+Website Name: dennis.paul.hamburg
+Website URL: dennis.paul.hamburg
+Website Author: Dennis Paul
+Author URL: dennis.paul.hamburg
+Copyright 2023. All Rights Reserved.
+----------------------------------------------*/
+
+* {
+    text-transform: lowercase !important;
+}
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+  --font-family: 'Fira Sans', sans-serif;
+}
+
+#light-dark-mode {
+    position: absolute;
+    top: var(--block-spacing-vertical);
+    right: var(--block-spacing-vertical);
+    cursor: pointer;
+    border: var(--border-width) solid var(--border-color) !important;
+}
+
+.profile-image img {
+    border: 5px var(--primary-inverse) solid;
+    max-width:280px;
+    box-shadow: 0 3px 8px 0 rgba(0,0,0,.5);
+}
+
+@media only screen and (min-width: 768px) {
+    header {
+        position: relative;
+        height: calc(280px + var(--block-spacing-vertical) * .66 * 2 - 100px);
+        margin-bottom: calc(var(--block-spacing-vertical) + 100px) !important;
+    }
+
+    span#links {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: calc(var(--block-spacing-vertical) * .66) var(--block-spacing-horizontal);
+    }
+
+    span#links a:nth-child(3) {
+        margin-right: 20px;
+    }
+
+    .profile-image {
+        position: relative;
+        display: inline-block;
+    }
+
+    h2 {
+        display: inline-block;
+        position: absolute;
+        left: calc(var(--block-spacing-horizontal) * 2 + 280px);
+        top: calc(280px + var(--block-spacing-vertical) * .66 * 2 - 200px);
+        font-size: 2.5rem;
+    }
+
+    table i {
+        font-size:14px;
+        width: 24px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        position: relative;
+        height: calc(280px + var(--block-spacing-vertical) * .66 * 2 + (var(--block-spacing-vertical)*0.66));
+        margin-bottom: calc(var(--block-spacing-vertical) + 100px) !important;
+    }
+
+    span#links {
+        display: block;
+        text-align: center;
+        margin-bottom: calc(var(--block-spacing-vertical) * .66);
+    }
+
+    .profile-image {
+        text-align: center;
+    }
+
+    h2, h3 {
+        margin-top: calc(var(--block-spacing-vertical) * .66);
+        text-align: center;
+    }
+
+    table i {
+        display: none !important;
+    }
+}
+
+h1 {
+    text-align: center;
+}
+
