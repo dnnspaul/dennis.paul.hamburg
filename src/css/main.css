@@ -513,8 +513,27 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .details-section {
+    .details-grid {
         grid-template-columns: 1fr;
+    }
+
+    .copyright {
+        order: 3;
+        margin-top: var(--spacing-lg);
+        grid-column: 1;
+    }
+
+    .projects-section {
+        order: 2;
+    }
+
+    .details-section {
+        order: 1;
+    }
+
+    .card-content {
+        display: flex;
+        flex-direction: column;
     }
 }
 
